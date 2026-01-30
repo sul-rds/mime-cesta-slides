@@ -139,16 +139,12 @@
     margin-top: 1rem;
   }
 
-  [alt="CIDR"] {
+  [alt="SUL"] {
+    height: 105px;
     margin-left: -5rem;
-    margin-top: -0.5rem;
-    height: 150px;
+    margin-top: 1rem;
   }
 
-  [alt="SUL"] {
-    grid-area: SUL;
-    height: 60px;
-  }
 }
 
 .reveal .img-row {

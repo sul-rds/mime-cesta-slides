@@ -1,4 +1,4 @@
-# The Director’s Signature: Stylometry of Theater Choreography via Pose and Action Estimation
+# The Director’s Signature: Computational and Historical Perspectives on Theatrical Stylometry
 
 <!-- .slide: data-background-video="assets/vis_fondly_phalp_coco.mp4" -->
 <!-- .slide: data-background-size="contain" -->
@@ -9,7 +9,7 @@
 ---
 
 
-## Introductions
+## The Team
 
 <div class="headshots">
 
@@ -26,8 +26,7 @@
 <div class="logos">
 
 ![TAPS](assets/logos/taps.png)
-![CIDR](assets/logos/CIDR_on_dark.1237x677.png)
-![SUL](assets/logos/sul_white.png)
+![SUL](assets/logos/Stanford-University-Libraries-stacked-wht.png)
 
 </div>
 
@@ -55,7 +54,7 @@ The project, Machine Intelligence for Motion Exegesis, or MIME, is a collaborati
 ## ➡️ &nbsp; Results and Analysis <!-- .element: class="fragment custom order-of-sections" -->
 
 
-## ➡️ &nbsp; Implications and Future Directions <!-- .element: class="fragment custom order-of-sections" -->
+## ➡️ &nbsp; Implications and Complications <!-- .element: class="fragment custom order-of-sections" -->
 
 <!-- .slide: class="order-of-sections" -->
 
@@ -650,6 +649,16 @@ While this research presents exciting quantitative analysis possibilities, its t
 
 Thank you.
 
+
+---
+
+
+# Complications
+
+:::
+
+Notes go here
+
 ---
 
 
@@ -658,8 +667,7 @@ Thank you.
 <div class="logos">
 
 ![TAPS](assets/logos/taps.png)
-![CIDR](assets/logos/CIDR_on_dark.1237x677.png)
-![SUL](assets/logos/sul_white.png)
+![SUL](assets/logos/Stanford-University-Libraries-stacked-wht.png)
 
 </div>
 
