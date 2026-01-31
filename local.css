@@ -125,8 +125,7 @@
     justify-items: center;
     padding: 1rem 0;
     grid-template-areas:
-      "TAPS CIDR"
-      "SUL SUL";
+      "TAPS SUL QR";
   }
 
   img {
@@ -135,13 +134,16 @@
 
   [alt="TAPS"] {
     height: 130px;
-    margin-right: -5rem;
     margin-top: 1rem;
   }
 
   [alt="SUL"] {
     height: 105px;
-    margin-left: -5rem;
+    margin-top: 1rem;
+  }
+
+  [alt="QR"] {
+    height: 105px;
     margin-top: 1rem;
   }
 

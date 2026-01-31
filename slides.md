@@ -154,6 +154,16 @@ As sometimes happens during this current era of AI research, a better model came
 
 ---
 
+## The Models Continue to Improve
+
+![Meta's SAM 3D Body](assets/methods/SAM3D_Body.png "Meta's SAM 3D Body model") <strong>Meta's SAM 3D Body</strong><br> Infers "Momentum Human Rig" (HMR) - rigid skeletons and volumetric meshes
+
+:::
+The reward for procrastination -- eventually a better model comes along.
+
+
+---
+
 
 ## PHALP: Predicting Human Appearance, Location and Pose
 
@@ -234,9 +244,9 @@ The loosely-coupled nature of the platform allows us to iterate on steps somewha
 
   <li style="margin-top:2rem"><strong style="font-size:2rem">Coordination Steps</strong>
     <ul>
-      <li>coordination of hands and poses</li>
-      <li>segmentation into movelets</li><!-- .element: class="fragment" -->
-      <li>calculation of pose-interest and action-interest metrics</li><!-- .element: class="fragment" -->
+      <li>coordination of hands and poses, calculating joint angles</li>
+      <li>segmentation into movelets with in-place and sidereal motion</li><!-- .element: class="fragment" -->
+      <li>calculation of pose and action interest, synchronous motion</li><!-- .element: class="fragment" -->
       <li>pregeneration of pose and face clusters</li><!-- .element: class="fragment" -->
     </ul> <!-- .element: class="fragment" -->
   </li><!-- .element: class="fragment" -->
@@ -364,7 +374,14 @@ We have face clustering plotted along a time axis.
 
 ---
 
-<img src="assets/interface/mime-mk1-3d-scene.png">
+<div class="img-row">
+
+![Visualization of 3D scene reconstruction](assets/interface/mime-3d-inference.png "A 3D scene reconstruction")
+
+![MIME 3D pose visualization](assets/interface/mime-mk1-3d-scene-hands.png "A 3D scene reconstruction")
+
+</div>
+
 <!-- .slide: data-transition="fade" -->
 
 :::
@@ -489,6 +506,50 @@ Here are some results with slightly more sophisticated classification algorithms
 ---
 
 
+## Feature Importances: Motion and Distance (Random Forest)
+
+<div class="img-row">
+
+![Motion and distance feature importances, Random Forest](assets/results/feature_importances_rf.png "Motion and distance feature importances, Random Forest") Permutation Importance
+
+![Motion and distance feature importances, Random Forest (sorted)](assets/results/feature_importances_rf_sorted.png "Motion and distance feature importances, Random Forest") Mean Decrease in Impurity
+
+</div>
+
+---
+
+
+## Collinearity of Motion and Distance Features
+
+<p class="stretch"><img
+  src="assets/results/feature_collinearity.png"
+/></p>
+
+---
+
+
+## Feature Importances: View-Invariant Pose Embeddings
+
+<div class="img-row">
+
+![Pose embedding feature importances, Random Forest](assets/results/poem_feature_importances_nb.png "Pose embedding feature importances, Random Forest") Permutation Importance (Gaussian Naive Bayes)
+
+![Pose embedding feature importances, Random Forest (sorted)](assets/results/poem_importances_rf.png "Pose embedding feature importances, Random Forest") Mean Decrease in Impurity (Random Forest)
+
+</div>
+
+---
+
+
+## Collinearity of View-Invariant Pose Vector Features
+
+<p class="stretch"><img
+  src="assets/results/poem_vector_collinearity.png"
+/></p>
+
+---
+
+
 ## Visualizing Directors' Pose "Repertoires"
 
 <img class="r-stretch" src="assets/results/poem_umap_sampled_2.png" />
@@ -537,6 +598,38 @@ Here you can see two different "thumbprints"--that demonstrate the the differenc
 
 ---
 
+
+## Delsarte Through the Years
+
+<div class="img-row">
+
+
+Ted Shawn: "Nobody Knows<br> the Trouble I've Seen" from his <br>_Four Dances Based on<br> American Folk Music_ in 1938
+![Ted Shawn Dancing his Nobody Knows the Trouble I've Seen in 1938](assets/results/Shawn_1938.png "Ted Shawn Dancing his Nobody Knows the Trouble I've Seen in 1938")
+
+Davon Rainey: <br>"Nobody Knows"<br> in 2016
+![Davon Rainey Dancing Nobody Knows in 2016](assets/results/Shawn_Rainey_2016.png "Davon Rainey Dancing Nobody Knows in 2016")
+
+</div>
+
+:::
+Added provisionally
+
+---
+
+## Delsarte Through the Years
+
+<div class="img-row">
+
+Plots of the prevalences of the Shawn/Delsarte "Reflection" pose archetype<br> in recordings of the two dances from the previous slides<br> (Ted Shawn dancing "Nobody Knows" in 1938, and Davon Rainey dancing the same in 2016).
+![MIME pose prevalence charts](assets/results/Shawn_Nobody_MIME.png "MIME pose prevalence charts")
+
+</div>
+
+:::
+Added provisionally
+
+---
 
 ## Direct Comparison: Multiple Directors' Stagings of the Same Work
 
@@ -668,6 +761,7 @@ Notes go here
 
 ![TAPS](assets/logos/taps.png)
 ![SUL](assets/logos/Stanford-University-Libraries-stacked-wht.png)
+![QR](assets/logos/mime-qr-code.svg)
 
 </div>
 
@@ -677,28 +771,6 @@ Notes go here
 
 # Appendix
 
-
----
-
-
-## Feature Importances: Motion and Distance (Random Forest)
-
-<div class="img-row">
-
-![Motion and distance feature importances, Random Forest](assets/results/feature_importances_rf.png "Motion and distance feature importances, Random Forest") Permutation Importance
-
-![Motion and distance feature importances, Random Forest (sorted)](assets/results/feature_importances_rf_sorted.png "Motion and distance feature importances, Random Forest") Mean Decrease in Impurity
-
-</div>
-
----
-
-
-## Collinearity of Motion and Distance Features
-
-<p class="stretch"><img
-  src="assets/results/feature_collinearity.png"
-/></p>
 
 ---
 
@@ -721,28 +793,6 @@ Notes go here
 ---
 
 
-## Feature Importances: View-Invariant Pose Embeddings
-
-<div class="img-row">
-
-![Pose embedding feature importances, Random Forest](assets/results/poem_feature_importances_nb.png "Pose embedding feature importances, Random Forest") Permutation Importance (Gaussian Naive Bayes)
-
-![Pose embedding feature importances, Random Forest (sorted)](assets/results/poem_importances_rf.png "Pose embedding feature importances, Random Forest") Mean Decrease in Impurity (Random Forest)
-
-</div>
-
----
-
-
-## Collinearity of View-Invariant Pose Vector Features
-
-<p class="stretch"><img
-  src="assets/results/poem_vector_collinearity.png"
-/></p>
-
----
-
-
 ## Pose "Repertoires" Visualization (Labeled Performances)
 
 <p class="stretch"><img
@@ -757,3 +807,25 @@ Notes go here
 <p class="stretch"><img
   src="assets/results/ava_umap.png"
 /></p>
+
+---
+
+
+## "Cursed" Frames (and Poses)
+
+<div class="img-row">
+
+![cursed_004863](assets/complications/cursed_004863.jpg)
+
+![cursed_083450](assets/complications/cursed_083450.jpg)
+
+![cursed_107925](assets/complications/cursed_107925.jpg)
+
+</div>
+
+:::
+
+These are cursed.
+
+
+---
