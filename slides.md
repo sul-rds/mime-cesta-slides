@@ -1,6 +1,6 @@
 # The Director’s Signature: Computational and Historical Perspectives on Theatrical Stylometry
 
-<!-- .slide: data-background-video="assets/vis_fondly_phalp_coco.mp4" -->
+<!-- .slide: data-background-video="assets/PHALP_fondly_excerpt_output.mp4" -->
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide: data-background-video-loop -->
 <!-- .slide: class="main-title" -->
