@@ -51,7 +51,7 @@ The project, Machine Intelligence for Motion Exegesis, or MIME, is a collaborati
 ## ➡️ &nbsp; The MIME Platform <!-- .element: class="fragment custom order-of-sections" -->
 
 
-## ➡️ &nbsp; Results and Analysis <!-- .element: class="fragment custom order-of-sections" -->
+## ➡️ &nbsp; Case Studies<!-- .element: class="fragment custom order-of-sections" -->
 
 
 ## ➡️ &nbsp; Implications and Complications <!-- .element: class="fragment custom order-of-sections" -->
@@ -159,8 +159,7 @@ As sometimes happens during this current era of AI research, a better model came
 ![Meta's SAM 3D Body](assets/methods/SAM3D_Body.png "Meta's SAM 3D Body model") <strong>Meta's SAM 3D Body</strong><br> Infers "Momentum Human Rig" (HMR) - rigid skeletons and volumetric meshes
 
 :::
-The reward for procrastination -- eventually a better model comes along.
-
+The reward for procrastination -- eventually a better model comes along. This is from a demo of Meta's Segment Anything 3D Body model, which was released a few months ago. The base model only works on still images, but there are already open-source projects that have adapted it to run on videos. It incorporates two models, a rigid skeleton model and a deformable mesh, which are inferred semi-independently. The model was trained on multi-camera recordings, improving its ability to infer what can't be seen from a single (monocular) camera. It also does a better job than previous models of matching hands and feet (though it's still not perfect at that) and supports a greater variety of body types.
 
 ---
 
@@ -173,7 +172,7 @@ Jathushan Rajasegaran, Georgios Pavlakos, Angjoo Kanazawa, Jitendra Malik. “Tr
 https://github.com/broadwell/PHALP
 
 :::
-The most crucial of these tools is named PHALP -- you can see the acronym there -- and it achieves state-of-the-art accuracy in pose estimation by interweaving the tasks of estimating human forms while also noting their appearance (that is, by extracting texture maps of their clothing and such) and tracking their trajectories over time in an estimated 3D space. This enables the transformer-based system to fill in occluded limbs and even entire poses that earlier models would "lose track of" for multiple frames before finding them again.
+The most important of the tools we used extensively, however, is a bit older, and it's named PHALP -- you can see the acronym there. It achieved state-of-the-art accuracy in pose estimation a few years ago (and is still the best for video) by interweaving the tasks of estimating human forms while also noting their appearance (that is, by extracting texture maps of their clothing and such) and tracking their trajectories over time in an estimated 3D space. This enables the transformer-based system to fill in occluded limbs and even entire poses that earlier models would "lose track of" for multiple frames before finding them again.
 
 
 ---
@@ -374,18 +373,20 @@ We have face clustering plotted along a time axis.
 
 ---
 
-<div class="img-row">
+<div>
 
-![Visualization of 3D scene reconstruction](assets/interface/mime-3d-inference.png "A 3D scene reconstruction")
-
-![MIME 3D pose visualization](assets/interface/mime-mk1-3d-scene-hands.png "A 3D scene reconstruction")
+<img src="assets/interface/mime-3d-inference.png" height="300px">
 
 </div>
+
+<img src="assets/interface/mime-mk1-3d-scene-hands.png" height="300px">
+
+<div>
 
 <!-- .slide: data-transition="fade" -->
 
 :::
-A 3D scene reconstruction
+These images illustrate how the PHALP software infers depth from monocular inputs. The visualization on the left is actually from a different model (MoGe = Monocular Geometry) that we chose because it looks cooler, but the two models use broadly similar deep learning-based approaches.
 
 ---
 
@@ -416,7 +417,7 @@ Michael's now going to show us some of the ways he's been able to make use of th
 ---
 
 
-# Results & Analysis
+# Case Studies
 
 ---
 
@@ -516,6 +517,9 @@ Here are some results with slightly more sophisticated classification algorithms
 
 </div>
 
+:::
+To get at the question of exactly which elements of these feature sets the models found the most useful at differentiating between directors, we ran some feature importance tests (here we show the results for the Random Forest algorithm, which had among the best performance and also provides two methods for feature importance evaluation, enabling us to compare the results). Although the error bars are large (again), and the results suggest that including some features may actually counter-productive, it we do get some indications that things like the deviation (variety) of motion, average amounts of motion, average amounts of synchronized motion, and perhaps the distance between actors help the model differentiate between directors, at least from a bulk "distant" viewing perspective.
+
 ---
 
 
@@ -524,6 +528,9 @@ Here are some results with slightly more sophisticated classification algorithms
 <p class="stretch"><img
   src="assets/results/feature_collinearity.png"
 /></p>
+
+:::
+We also can run some tests to evaluate which features are collinear, in that their contributions to the classifications tend to point in the same directions, indicating that some of them may be redundant. It's also interesting to note that for example the simultaneous motion features are not particularly collinear with the raw motion features, so probably it's worth keeping both of them as inputs to the classifier.
 
 ---
 
@@ -536,6 +543,9 @@ Here are some results with slightly more sophisticated classification algorithms
 
 ![Pose embedding feature importances, Random Forest (sorted)](assets/results/poem_importances_rf.png "Pose embedding feature importances, Random Forest") Mean Decrease in Impurity (Random Forest)
 
+:::
+In the case of the embeddings, however, it's more difficult to determine what the salience of features 1 and 8 (out of 16) actually means for poses -- we'll show some initial steps we've taken to dig into this in a couple of slides.
+
 </div>
 
 ---
@@ -546,6 +556,9 @@ Here are some results with slightly more sophisticated classification algorithms
 <p class="stretch"><img
   src="assets/results/poem_vector_collinearity.png"
 /></p>
+
+:::
+The collinearity analysis is similar not very insightful when we're considering semantic pose embeddings; really one of the only ways to get insights about these is to investigate them in the context of the poses to which they match the best.
 
 ---
 
@@ -621,7 +634,7 @@ Added provisionally
 
 <div class="img-row">
 
-Plots of the prevalences of the Shawn/Delsarte "Reflection" pose archetype<br> in recordings of the two dances from the previous slides<br> (Ted Shawn dancing "Nobody Knows" in 1938, and Davon Rainey dancing the same in 2016).
+Plots of the prevalences of the Shawn/Delsarte "Reflection" pose archetype<br> in the two dance recordings from the previous slide<br> (Ted Shawn in his "Nobody Knows" in 1938, and Davon Rainey in the same in 2016)
 ![MIME pose prevalence charts](assets/results/Shawn_Nobody_MIME.png "MIME pose prevalence charts")
 
 </div>
@@ -652,7 +665,7 @@ Added provisionally
 :::
 
 
-Our final analytical experiment to date, which is still a work in progress, sort of inverts the previous approach and instead considers what MIME can reveal when comparing staging from seven different directors who were all directing the same work -- in this case Mozart and Da Ponte's  Don Giovanni from 1787.
+Another case study sort of inverts the previous approach and instead considers what MIME can reveal when comparing staging from seven different directors who were all directing the same work -- in this case Mozart and Da Ponte's Don Giovanni from 1787.
 
 The screenshots below show some pose estimation output from each of the directors' stagings -- note that in every case this is the same scene, from the finale of Act I.
 
@@ -713,13 +726,31 @@ Practically speaking, the easiest way to align the recordings, which only works 
 </div>
 
 :::
-As a final analytical output of the effort just described, we can plot the pose or motion similarities of each of the 7 performances to the average  "consensus" performance across the entire work (the dashed lines are scene and act boundaries). This is still a work in progress, but we can use this analysis to detect patterns such as certain scenes in which stagings are more likely to deviate from the consensus poses, and eventually use this to highlight automatically where directors might use especially distinctive poses and actions. Stay tuned...
+As a final analytical output of the effort just described, we can plot the pose or motion similarities of each of the 7 performances to the average  "consensus" performance across the entire work (the dashed lines are scene and act boundaries). This is still a work in progress, but we can use this analysis to detect patterns such as certain scenes in which stagings are more likely to deviate from the consensus poses, and eventually use this to highlight automatically where directors might use especially distinctive poses and actions.
 
 
 ---
 
+## Comparing Degrees of Simultanous Movement (Gestures)
 
-# Implications
+<div class="r-stack">
+  <img
+    src="assets/results/Kontakthof_Simultaneous_Joint_Motion.png"
+  />
+  <img
+    class="fragment"
+    src="assets/results/Kontakthof65_Simultaneous_Joint_Motion.png"
+  />
+</div>
+
+:::
+Added provisionally
+The amount of synchronization (1 = total sync, 0 = no sync, -1 = mirroring motions) is calculatd by comparing the speed and direction in which a joint is rotating on one figure to the corresponding joint on another figure in the shot at the same time -- and then taking the average for all matched joints at the same time. So it's a particular kind of cheerleader (or K-pop) style in-place gesture synchronization analysis. We have other metrics that can quantify concerted "sidereal" motion of keypoints or entire figures relative to the background, but that is (even) messier to analyze than this.
+
+---
+
+
+# Implications and Complications
 
 :::
 To recap, using MIME, we can
@@ -742,15 +773,42 @@ While this research presents exciting quantitative analysis possibilities, its t
 
 Thank you.
 
+---
+
+# Material and Interpretive Discrepancies
+
+<!-- .slide: data-background-video="assets/complications/PHALP_Shawn_Nobody_Knows_stacked.mp4" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-background-video-loop -->
+<!-- .slide: class="main-title" -->
+
+---
+
+# Tracking and Occlusion in Monocular Video
+
+<!-- .slide: data-background-video="assets/complications/fondly_phalp_opp_comparison_sbs.mp4" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-background-video-loop -->
+<!-- .slide: class="main-title" -->
 
 ---
 
 
-# Complications
+## "Cursed" Frames (and Poses)
+
+<div class="img-row">
+
+![cursed_004863](assets/complications/cursed_004863.jpg)
+
+![cursed_083450](assets/complications/cursed_083450.jpg)
+
+![cursed_107925](assets/complications/cursed_107925.jpg)
+
+</div>
 
 :::
 
-Notes go here
+These are cursed.
 
 ---
 
@@ -807,25 +865,3 @@ Notes go here
 <p class="stretch"><img
   src="assets/results/ava_umap.png"
 /></p>
-
----
-
-
-## "Cursed" Frames (and Poses)
-
-<div class="img-row">
-
-![cursed_004863](assets/complications/cursed_004863.jpg)
-
-![cursed_083450](assets/complications/cursed_083450.jpg)
-
-![cursed_107925](assets/complications/cursed_107925.jpg)
-
-</div>
-
-:::
-
-These are cursed.
-
-
----
