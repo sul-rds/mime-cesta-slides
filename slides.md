@@ -436,6 +436,21 @@ Using MIME's timeline, we can easily analyze a production in terms of repetetive
 ---
 
 
+## Comparing Degrees of Simultanous Movement (Gestures)
+
+<div class="r-stack">
+  <img
+    src="assets/results/Kontakthof_Simultaneous_Joint_Motion.png"
+  />
+  <img
+    class="fragment"
+    src="assets/results/Kontakthof65_Simultaneous_Joint_Motion.png"
+  />
+</div>
+
+---
+
+
 ## Corpus Studies: Assembling Multiple Works per Director
 
 <img class="r-stretch" src="assets/results/31_performances.png" />
@@ -739,21 +754,6 @@ As a final analytical output of the effort just described, we can plot the pose 
 ---
 
 
-## Comparing Degrees of Simultanous Movement (Gestures)
-
-<div class="r-stack">
-  <img
-    src="assets/results/Kontakthof_Simultaneous_Joint_Motion.png"
-  />
-  <img
-    class="fragment"
-    src="assets/results/Kontakthof65_Simultaneous_Joint_Motion.png"
-  />
-</div>
-
----
-
-
 # Complications
 
 :::
@@ -765,6 +765,45 @@ We must recognize the limitations of focusing solely on pose. Theater is multifa
 This computational approach cannot definitively determine directorial intent. Observed patterns may stem from conscious choices, actor improvisations, or unintentional elements. These findings should serve as starting points for deeper investigations, not definitive conclusions.
 
 The difficulty identifying gesture and motion. What we're looking for is, stable keyframes (distinctive poses), stable transitions (how you get between them), stable timing ratios (hold vs travel), stable spatial logic (path, plane, orientation)--and it's awfully hard to define those.
+
+---
+
+
+## Material and Interpretive Discrepancies
+
+<!-- .slide: data-background-video="assets/complications/PHALP_Shawn_Nobody_Knows_stacked.mp4" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-background-video-loop -->
+<!-- .slide: class="main-title" -->
+
+---
+
+
+## Tracking and Occlusion in Monocular Video
+
+<!-- .slide: data-background-video="assets/complications/fondly_phalp_opp_comparison_sbs.mp4" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-background-video-loop -->
+<!-- .slide: class="main-title" -->
+
+---
+
+
+## "Cursed" Frames (and Poses)
+
+<div class="img-row">
+
+![cursed_004863](assets/complications/cursed_004863.jpg)
+
+![cursed_083450](assets/complications/cursed_083450.jpg)
+
+![cursed_107925](assets/complications/cursed_107925.jpg)
+
+</div>
+
+:::
+
+These are cursed.
 
 ---
 
@@ -787,26 +826,6 @@ It creates an unprecedented record of a production's physical language. This “
 While this research presents exciting quantitative analysis possibilities, its true value lies in complementing traditional scholarly approaches. By integrating computational methods with human interpretation, we develop a more comprehensive understanding of theatrical performance and directorial style, enriching both academic discourse and artistic practice.
 
 Thank you.
-
----
-
-
-# Material and Interpretive Discrepancies
-
-<!-- .slide: data-background-video="assets/complications/PHALP_Shawn_Nobody_Knows_stacked.mp4" -->
-<!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background-video-loop -->
-<!-- .slide: class="main-title" -->
-
----
-
-
-# Tracking and Occlusion in Monocular Video
-
-<!-- .slide: data-background-video="assets/complications/fondly_phalp_opp_comparison_sbs.mp4" -->
-<!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background-video-loop -->
-<!-- .slide: class="main-title" -->
 
 ---
 
