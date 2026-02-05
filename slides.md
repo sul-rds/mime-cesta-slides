@@ -154,6 +154,7 @@ As sometimes happens during this current era of AI research, a better model came
 
 ---
 
+
 ## The Models Continue to Improve
 
 ![Meta's SAM 3D Body](assets/methods/SAM3D_Body.png "Meta's SAM 3D Body model") <strong>Meta's SAM 3D Body</strong><br> Infers "Momentum Human Rig" (HMR) - rigid skeletons and volumetric meshes
@@ -259,6 +260,8 @@ The pipeline is first and foremost about running the inference tasks.
 In addition to the three core technologies that Peter already introduced our ingestion pipeline can also optionally perform Shot-Detection, Face Recognition, and Hand Estimation,
 
 and once we have all this information we also need to perform a number of coordination tasks
+
+these are tasks that are adjacent to the primary AI/ML inference tasks and which supplement and augment the raw pose estimation data.
 
 ---
 
@@ -394,6 +397,8 @@ A 3D scene reconstruction
 
 :::
 This is an interactive 2D UMAP projection of poses clustered with the HDBSCAN algorithm.
+
+We're using the visualization code here from pixplot, but the clustering and the projection are based not on the images but on the vector space that represents our pose estimation inference vectors.
 
 ---
 
@@ -617,6 +622,7 @@ Added provisionally
 
 ---
 
+
 ## Delsarte Through the Years
 
 <div class="img-row">
@@ -630,6 +636,7 @@ Plots of the prevalences of the Shawn/Delsarte "Reflection" pose archetype<br> i
 Added provisionally
 
 ---
+
 
 ## Direct Comparison: Multiple Directors' Stagings of the Same Work
 
