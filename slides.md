@@ -51,7 +51,7 @@ The project, Machine Intelligence for Motion Exegesis, or MIME, is a collaborati
 ## ➡️ &nbsp; The MIME Platform <!-- .element: class="fragment custom order-of-sections" -->
 
 
-## ➡️ &nbsp; Results and Analysis <!-- .element: class="fragment custom order-of-sections" -->
+## ➡️ &nbsp; Case Studies <!-- .element: class="fragment custom order-of-sections" -->
 
 
 ## ➡️ &nbsp; Implications and Complications <!-- .element: class="fragment custom order-of-sections" -->
@@ -613,7 +613,7 @@ Davon Rainey: <br>"Nobody Knows"<br> in 2016
 </div>
 
 :::
-Added provisionally
+Recently, we have been looking at the footage of Ted Shawn, a choreographer and dancer who was influenced by the work of Delsarte. Ted Shawn later went on to influence many strains of modern american dance, and in recent years there's been a revival of interest in his work, as well as some remountings of his dances. 
 
 ---
 
@@ -719,39 +719,42 @@ As a final analytical output of the effort just described, we can plot the pose 
 ---
 
 
+# Complications
+
+:::
+
+In all applications using AI, it's important to acknowledge ethical considerations and limitations. Like all AI, there's danger in incorrect pose estimations and hallucination. Working with archival materials requires careful navigation—we've developed clear guidelines ensuring respectful, responsible use.
+
+We must recognize the limitations of focusing solely on pose. Theater is multifaceted—pose is critical but represents only one thread in a rich tapestry including dialogue, set design, lighting, and sound. This analysis should complement, not replace, traditional artistic analysis methods.
+
+This computational approach cannot definitively determine directorial intent. Observed patterns may stem from conscious choices, actor improvisations, or unintentional elements. These findings should serve as starting points for deeper investigations, not definitive conclusions.
+
+The difficulty identifying gesture and motion. What we're looking for is, stable keyframes (distinctive poses), stable transitions (how you get between them), stable timing ratios (hold vs travel), stable spatial logic (path, plane, orientation)--and it's awfully hard to define those.
+
+Cursed frames:
+
+---
+
+
 # Implications
 
 :::
-To recap, using MIME, we can
-
+To return to the examples I started with, Bob Fosse shoulder rolls, or Brecht's silent scream are ways in which scholars use examples to illustrate an idea about a performer's work. However these depend on selective attention and “memorable moments.
+pose-derived representations can expose the selectivity of critical description by contrasting salience vs prevalence.
 Use pose similarity functions, to identify recurring poses, symmetry, and the rhythmic ebb and flow of staging. We can identify aggegrate stylistic elements that define a director's output, separating their unique contribution from performers' work or textual constraints. We can identify poses that make reference to historical movements and style and trace the evolution of a choreography. MIME also enables objective comparisons between different directors' interpretations, revealing new dimensions of artistic expression.
 
 We can compare different directors' versions to show how physical expression and spatial storytelling evolve over time, across cultures, or in canonical works. Scholars could examine how themes or characters are represented physically—for instance, how kings are staged to show varying representations of power between productions.
 
 This technology could chart how actors' physical choices evolve through rehearsals. Given the precision of the timeline view, we can correlate pose data with audience response—applause or laughter—to see which physical expressions elicit the strongest responses, deepening our understanding of audience engagement.
 
-It creates an unprecedented record of a production's physical language—valuable for future research, teaching, or restaging. Beyond theater, this methodology could be adapted to film, opera, dance, and other movement-based arts. It could also apply to diverse fields from political speeches to sports biomechanics.
+It creates an unprecedented record of a production's physical language. This “movement score” that is: shareable (across directors, academics, archivists), reviewable (you can point to the same extracted segment/metric), debatable (people can contest what the metric means). This is kind of evidence object that sits between video and prose. This is valuable for future research, teaching, or restaging. Beyond theater, this methodology could be adapted to film, opera, dance, and other movement-based arts. It could also apply to diverse fields from political speeches to sports biomechanics.
 
-However, we must acknowledge ethical considerations and limitations. Like all AI, there's danger in incorrect pose estimations. Working with archival materials requires careful navigation—we've developed clear guidelines ensuring respectful, responsible use.
 
-We must recognize the limitations of focusing solely on pose. Theater is multifaceted—pose is critical but represents only one thread in a rich tapestry including dialogue, set design, lighting, and sound. This analysis should complement, not replace, traditional artistic analysis methods.
 
-This computational approach cannot definitively determine directorial intent. Observed patterns may stem from conscious choices, actor improvisations, or unintentional elements. These findings should serve as starting points for deeper investigations, not definitive conclusions.
 
 While this research presents exciting quantitative analysis possibilities, its true value lies in complementing traditional scholarly approaches. By integrating computational methods with human interpretation, we develop a more comprehensive understanding of theatrical performance and directorial style, enriching both academic discourse and artistic practice.
 
 Thank you.
-
-
----
-
-
-# Complications
-
-:::
-
-Notes go here
-
 ---
 
 
