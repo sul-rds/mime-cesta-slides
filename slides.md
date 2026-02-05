@@ -753,15 +753,6 @@ As a final analytical output of the effort just described, we can plot the pose 
 
 # Complications
 
-:::
-
-In all applications using AI, it's important to acknowledge ethical considerations and limitations. Like all AI, there's danger in incorrect pose estimations and hallucination. Working with archival materials requires careful navigation—we've developed clear guidelines ensuring respectful, responsible use.
-
-We must recognize the limitations of focusing solely on pose. Theater is multifaceted—pose is critical but represents only one thread in a rich tapestry including dialogue, set design, lighting, and sound. This analysis should complement, not replace, traditional artistic analysis methods.
-
-This computational approach cannot definitively determine directorial intent. Observed patterns may stem from conscious choices, actor improvisations, or unintentional elements. These findings should serve as starting points for deeper investigations, not definitive conclusions.
-
-The difficulty identifying gesture and motion. What we're looking for is, stable keyframes (distinctive poses), stable transitions (how you get between them), stable timing ratios (hold vs travel), stable spatial logic (path, plane, orientation)--and it's awfully hard to define those.
 
 ---
 
@@ -801,6 +792,21 @@ The difficulty identifying gesture and motion. What we're looking for is, stable
 :::
 
 These are cursed.
+
+---
+
+
+# Complications
+
+:::
+
+In all applications using AI, it's important to acknowledge ethical considerations and limitations. Like all AI, there's danger in incorrect pose estimations and hallucination. Working with archival materials requires careful navigation—we've developed clear guidelines ensuring respectful, responsible use.
+
+We must recognize the limitations of focusing solely on pose. Theater is multifaceted—pose is critical but represents only one thread in a rich tapestry including dialogue, set design, lighting, and sound. This analysis should complement, not replace, traditional artistic analysis methods.
+
+This computational approach cannot definitively determine directorial intent. Observed patterns may stem from conscious choices, actor improvisations, or unintentional elements. These findings should serve as starting points for deeper investigations, not definitive conclusions.
+
+The difficulty identifying gesture and motion. What we're looking for is, stable keyframes (distinctive poses), stable transitions (how you get between them), stable timing ratios (hold vs travel), stable spatial logic (path, plane, orientation)--and it's awfully hard to define those.
 
 ---
 
