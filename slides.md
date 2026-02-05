@@ -54,7 +54,10 @@ The project, Machine Intelligence for Motion Exegesis, or MIME, is a collaborati
 ## ➡️ &nbsp; Case Studies <!-- .element: class="fragment custom order-of-sections" -->
 
 
-## ➡️ &nbsp; Implications and Complications <!-- .element: class="fragment custom order-of-sections" -->
+## ➡️ &nbsp; Complications and Implications <!-- .element: class="fragment custom order-of-sections" -->
+
+
+## ➡️ &nbsp; Closing Thoughts <!-- .element: class="fragment custom order-of-sections" -->
 
 <!-- .slide: class="order-of-sections" -->
 
@@ -438,15 +441,9 @@ Using MIME's timeline, we can easily analyze a production in terms of repetetive
 
 ## Comparing Degrees of Simultanous Movement (Gestures)
 
-<div class="r-stack">
   <img
     src="assets/results/Kontakthof_Simultaneous_Joint_Motion.png"
   />
-  <img
-    class="fragment"
-    src="assets/results/Kontakthof65_Simultaneous_Joint_Motion.png"
-  />
-</div>
 
 ---
 
@@ -826,6 +823,12 @@ It creates an unprecedented record of a production's physical language. This “
 While this research presents exciting quantitative analysis possibilities, its true value lies in complementing traditional scholarly approaches. By integrating computational methods with human interpretation, we develop a more comprehensive understanding of theatrical performance and directorial style, enriching both academic discourse and artistic practice.
 
 Thank you.
+
+---
+
+
+# Closing Thoughts
+
 
 ---
 

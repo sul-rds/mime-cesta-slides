@@ -53,6 +53,10 @@
   h2 + h2 + h2 + h2 + h2 {
     margin-left: 16rem;
   }
+
+  h2 + h2 + h2 + h2 + h2 + h2 {
+    margin-left: 20rem;
+  }
 }
 
 .fragment.order-of-sections.current-fragment {
@@ -124,8 +128,7 @@
     align-items: center;
     justify-items: center;
     padding: 1rem 0;
-    grid-template-areas:
-      "TAPS SUL QR";
+    grid-template-areas: "TAPS SUL QR";
   }
 
   img {
@@ -146,7 +149,6 @@
     height: 105px;
     margin-top: 1rem;
   }
-
 }
 
 .reveal .img-row {
